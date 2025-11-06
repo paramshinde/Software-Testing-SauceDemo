@@ -9,4 +9,6 @@ class CartPage:
             return self.driver.find_element(*self.Cart_Item_Name).text
         except:
             return None
+    def click_checkout(self):
+        self.driver.find_element(*self.Checkout_Button).click()
     
