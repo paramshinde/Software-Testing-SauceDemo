@@ -9,5 +9,5 @@ def test_successful_login(driver):
 def test_locked_out_login(driver):
     loginpage=LoginPage(driver)
     loginpage.login("locked_out_user",'secret_sauce')
-    expected_error="Sorry this user has been locked"
+    expected_error="Epic sadface: Sorry, this user has been locked out."
     assert loginpage.get_error_message() in expected_error
